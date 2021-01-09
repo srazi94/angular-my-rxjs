@@ -11,8 +11,8 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let item of productList" scope="row">
-      <td></td>
+    <tr *ngFor="let item of productList; let i = index" scope="row">
+      <td>{{ i + 1 }}</td>
       <td>{{item.slug}}</td>
       <td>Otto</td>
       <td>@mdo</td>
