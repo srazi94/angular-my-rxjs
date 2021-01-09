@@ -8,7 +8,7 @@ import { map, toArray, filter } from "rxjs/operators";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent implements OnInit {
-  productList: any;
+  productList: any = [];
   constructor(private http: HttpClient) {}
   ngOnInit() {
     this.getAllProduct();

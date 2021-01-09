@@ -1,22 +1,21 @@
-<hello name="{{ name }}"></hello>
 <table class="table caption-top">
-  <caption>
-    List of users
-  </caption>
-  <thead>
-    <tr>
-      <th scope="col">SNO</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of getAllProduct; let i=index">
-      <th scope="row"></th>
-      <td>{{item.blog_title}}</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-  </tbody>
+	<caption>
+		List of users
+	</caption>
+	<thead>
+		<tr>
+			<th scope="col">SNO</th>
+			<th scope="col">First</th>
+			<th scope="col">Last</th>
+			<th scope="col">Handle</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="row"></th>
+			<td>{{item.blog_title}}</td>
+			<td>Otto</td>
+			<td>@mdo</td>
+		</tr>
+	</tbody>
 </table>
