@@ -8,7 +8,7 @@ import { map, toArray, filter } from "rxjs/operators";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent implements OnInit {
-  productList: any = [];
+  productList;
   constructor(private http: HttpClient) {}
   ngOnInit() {
     this.getAllProduct();
@@ -16,9 +16,12 @@ export class AppComponent implements OnInit {
   name = "Angular " + VERSION.major;
   getAllProduct() {
     let apiUrl = "http://sajjadweb.pythonanywhere.com/apiv1/blog_list_api";
-    this.http.get(apiUrl).subscribe((respose: any) => {
-      console.log(respose);
-      this.getAllProduct = respose;
-    });
+    this.http
+      .get(apiUrl)
+      .pipe(toArray())
+      .subscribe((respose: any[]) => {
+        console.log(respose);
+        this.productList = respose;
+      });
   }
 }
